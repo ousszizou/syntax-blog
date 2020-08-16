@@ -1,0 +1,18 @@
+{
+  "name": "syntaxBlog",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "tailwindcss": "^1.6.2",
+    "vue-feather-icons": "^5.1.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3"
+  }
+}
