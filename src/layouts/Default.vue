@@ -91,9 +91,20 @@ export default {
   box-shadow: none !important;
 }
 
+.headroom--not-top {
+  transform: translate3d(0px, 0px, 0px) !important;
+  width: 100% !important;
+  position: fixed !important;
+}
+
 .headroom--pinned {
   box-shadow: 1px 1px 18px #00000030;
   width: 100%;
+}
+
+.headroom--unpinned {
+  transform: translate3d(0px, 0px, 0px) !important;
+  box-shadow: 1px 1px 18px #00000030;
 }
 
 .headroom > header {
