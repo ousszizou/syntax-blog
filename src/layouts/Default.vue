@@ -1,22 +1,24 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/articles/">مقالات </g-link>
-        <g-link class="nav__link" to="/tutorials/">دروس </g-link>
-        <g-link class="nav__link" to="/courses/">دورات </g-link>
-        <g-link class="nav__link" to="/contact">اتصل بنا</g-link>
-        <ToggleDarkMode class="align-middle mr-6" data-cursor-hover>
-          <template slot="default" slot-scope="{ dark }">
-            <MoonIcon v-if="dark" />
-            <SunIcon v-else />
-          </template>
-        </ToggleDarkMode>
-      </nav>
-    </header>
+    <headroom>
+      <header class="header">
+        <strong>
+          <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
+        </strong>
+        <nav class="nav">
+          <g-link class="nav__link" to="/articles/">مقالات </g-link>
+          <g-link class="nav__link" to="/tutorials/">دروس </g-link>
+          <g-link class="nav__link" to="/courses/">دورات </g-link>
+          <g-link class="nav__link" to="/contact">اتصل بنا</g-link>
+          <ToggleDarkMode class="align-middle mr-6" data-cursor-hover>
+            <template slot="default" slot-scope="{ dark }">
+              <MoonIcon v-if="dark" />
+              <SunIcon v-else />
+            </template>
+          </ToggleDarkMode>
+        </nav>
+      </header>
+    </headroom>
     <slot />
     <footer class="text-sm mt-16">
       <div class="my-6 flex justify-between">
@@ -52,10 +54,10 @@ query {
 
 <script>
 import ToggleDarkMode from "~/components/ToggleDarkMode";
+import { headroom } from "vue-headroom";
 import {
   SunIcon,
   MoonIcon,
-  HeartIcon,
   FacebookIcon,
   LinkedinIcon,
   TwitterIcon,
@@ -66,25 +68,50 @@ export default {
     ToggleDarkMode,
     SunIcon,
     MoonIcon,
-    HeartIcon,
     FacebookIcon,
     LinkedinIcon,
     TwitterIcon,
+    headroom,
   },
 };
 </script>
 
 <style>
 
+/* .layout div:first-child {
+  width: 100%;
+} */
+
+.headroom {
+  width: 100%;
+  background: var(--bg-color);
+}
+
+.headroom--top {
+  box-shadow: none !important;
+}
+
+.headroom--pinned {
+  box-shadow: 1px 1px 18px #00000030;
+  width: 100%;
+}
+
+.headroom > header {
+  width: 720px;
+  margin: 0 auto;
+  background: var(--bg-color);
+}
+
 /* change highlight selection color */
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #111;
-  background: #FFEE5B;
+  background: #ffee5b;
 }
 
 ::selection {
   color: #111;
-  background: #FFEE5B;
+  background: #ffee5b;
 }
 
 body {
@@ -117,7 +144,7 @@ body {
   background: var(--text-color);
   color: var(--bg-color);
   z-index: 999;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .header .logo:hover {
@@ -153,7 +180,7 @@ footer {
 }
 
 .footer__links a {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .footer__links a:hover {
@@ -163,5 +190,4 @@ footer {
 .footer__socialmedia:hover {
   cursor: pointer;
 }
-
 </style>
