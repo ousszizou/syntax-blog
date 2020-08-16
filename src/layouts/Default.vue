@@ -20,7 +20,7 @@
       </header>
     </headroom>
     <slot />
-    <footer class="text-sm mt-16">
+    <footer class="text-sm mt-16 mb-6">
       <div class="my-6 flex justify-between">
         <div class="footer__links self-center">
           <g-link to="/" class="footer__link">سياسة الخصوصية</g-link>
