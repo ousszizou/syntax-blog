@@ -1,16 +1,16 @@
 <template>
   <div class="layout">
     <headroom>
-      <header class="header">
+      <header class="header w-full md:w-base">
         <strong>
-          <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
+          <g-link to="/" class="logo text-xs md:text-base">{{ $static.metadata.siteName }}</g-link>
         </strong>
         <nav class="nav">
-          <g-link class="nav__link" to="/articles/">مقالات </g-link>
-          <g-link class="nav__link" to="/tutorials/">دروس </g-link>
-          <g-link class="nav__link" to="/courses/">دورات </g-link>
-          <g-link class="nav__link" to="/contact">اتصل بنا</g-link>
-          <ToggleDarkMode class="align-middle mr-6" data-cursor-hover>
+          <g-link class="nav__link px-1 text-base md:px-2" to="/articles/">مقالات </g-link>
+          <g-link class="nav__link px-1 text-base md:px-2" to="/tutorials/">دروس </g-link>
+          <g-link class="nav__link px-1 text-base md:px-2" to="/courses/">دورات </g-link>
+          <g-link class="nav__link px-1 text-base md:px-2" to="/contact">اتصل بنا</g-link>
+          <ToggleDarkMode class="align-middle mr-2 md:mr-6" data-cursor-hover>
             <template slot="default" slot-scope="{ dark }">
               <MoonIcon v-if="dark" />
               <SunIcon v-else />
@@ -98,6 +98,10 @@ export default {
   position: fixed !important;
 }
 
+.headroom--not-top header {
+  @apply px-2
+}
+
 .headroom--pinned {
   box-shadow: 1px 1px 18px #00000030;
   width: 100%;
@@ -109,7 +113,6 @@ export default {
 }
 
 .headroom > header {
-  width: 720px;
   margin: 0 auto;
   transition: background-color .6s;
 }
@@ -175,10 +178,6 @@ body {
   z-index: -1;
 }
 
-.nav__link {
-  margin-left: 20px;
-}
-
 .nav__link:hover {
   color: var(--text-hover);
 }
@@ -202,4 +201,14 @@ footer {
 .footer__socialmedia:hover {
   cursor: pointer;
 }
+
+
+/* Responsive */
+
+@screen md {
+  .headroom--not-top header {
+    @apply px-0
+  }
+}
+
 </style>

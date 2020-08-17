@@ -4,12 +4,10 @@ module.exports = {
     extend: {
       fontFamily: {
         helveticaRoman: ["HelveticaNeueLTRoman"],
-        sans: [
-          "HelveticaNeueLTRoman",
-          "Roboto",
-          "Arial",
-          "sans-serif",
-        ],
+        sans: ["HelveticaNeueLTRoman", "Roboto", "Arial", "sans-serif"],
+      },
+      spacing: {
+        "base": "720px",
       },
     },
   },
