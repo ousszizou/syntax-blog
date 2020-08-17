@@ -193,15 +193,17 @@ footer {
   margin-left: 20px;
 }
 
-.footer__links a {
-  transition: all 0.3s ease-in-out;
-}
 
 .footer__links a:hover {
   color: #6fb451;
 }
 
 .footer__socialmedia a:hover {
+  cursor: pointer;
+  color: #6fb451;
+}
+
+footer p a:hover {
   cursor: pointer;
   color: #6fb451;
 }
