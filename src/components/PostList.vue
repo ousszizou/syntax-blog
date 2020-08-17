@@ -1,10 +1,10 @@
 <template>
   <div>
-    <span v-if="$page.allPost.totalCount == 0">
-      نعمل على كتابة مقالات جديدة و حصرية ... شكرا لإهتمامك
+    <span v-if="$page.allPost.totalCount == 0" class="text-sm md:text-xl">
+      نعمل على كتابة مقالات ... شكرا لإهتمامك
     </span>
     <g-link v-else :to="post.path">
-      <li class="rounded hover:bg-gray-300 p-3">
+      <li class="rounded hover:bg-gray-300 p-3 text-sm md:text-xl">
         {{ post.title }}
       </li>
     </g-link>

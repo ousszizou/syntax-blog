@@ -1,10 +1,10 @@
 <template>
   <div>
-    <span v-if="$page.allCourse.totalCount == 0">
-      نعمل على تجهيز دورات إحترافية ... شكرا لإهتمامك
+    <span v-if="$page.allCourse.totalCount == 0" class="text-sm md:text-xl">
+      نعمل على تجهيز دورات جديدة ... شكرا لإهتمامك
     </span>
     <g-link v-else :to="course.path">
-      <li class="rounded hover:bg-gray-300 p-3">
+      <li class="rounded hover:bg-gray-300 p-3 text-sm">
         {{ course.title }}
       </li>
     </g-link>

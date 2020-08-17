@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="latestPosts__header">
-      <h2 class="text-xl font-bold inline-block ml-4">
+      <h2 class="text-lg md:text-xl font-bold inline-block ml-4">
         <coffee-icon class="inline ml-1 w-4"></coffee-icon>آخر المقالات
       </h2>
       <g-link to="/" class="inline-block text-xs p-1 rounded">شاهد الكل</g-link>

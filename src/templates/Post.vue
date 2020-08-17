@@ -2,15 +2,15 @@
   <Layout>
     <div class="mt-16">
       <div class="text-center">
-        <h1 class="post__title text-5xl mb-4">{{ $page.post.title }}</h1>
-        <div class="post__time text-xs">
+        <h1 class="post__title text-2xl sm:text-5xl mb-4">{{ $page.post.title }}</h1>
+        <div class="post__time text-smallest sm:text-xs">
           <span>{{ moment($page.post.date).format("MMMM Do, YYYY") }}</span> |
           <span class="font-bold">{{ $page.post.timeToRead }} min read</span>
         </div>
-        <div class="post__author text-xs">
+        <div class="post__author text-smallest sm:text-xs">
           Posted by<span class="font-bold"> {{ $page.post.author }} </span>
         </div>
-        <div class="post__tags mt-1">
+        <div class="post__tags mt-3 text-smallest sm:text-sm">
           <span
             class="px-1 rounded mx-1"
             v-for="tag in $page.post.tags"
@@ -20,7 +20,7 @@
           </span>
         </div>
       </div>
-      <div class="mt-16 break-words">
+      <div class="mt-10 sm:mt-16 break-words text-lg sm:text-xl">
         <p v-html="$page.post.content"></p>
       </div>
     </div>
@@ -53,10 +53,5 @@ h1 {
   background: var(--link-bg);
   color: var(--link-color);
   transition: all 0.3s ease-in-out;
-  font-size: 13px;
-}
-
-h2 {
-  font-size: 1.25rem;
 }
 </style>

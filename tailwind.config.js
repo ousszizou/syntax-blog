@@ -6,8 +6,11 @@ module.exports = {
         helveticaRoman: ["HelveticaNeueLTRoman"],
         sans: ["HelveticaNeueLTRoman", "Roboto", "Arial", "sans-serif"],
       },
+      fontSize: {
+        smallest: "11px",
+      },
       spacing: {
-        "base": "720px",
+        base: "720px",
       },
     },
   },

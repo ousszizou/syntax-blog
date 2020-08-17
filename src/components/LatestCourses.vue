@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="latestCourses__header">
-      <h2 class="text-xl font-bold inline-block ml-4">
+      <h2 class="text-lg md:text-xl font-bold inline-block ml-4">
         <zap-icon class="inline ml-1 w-4"></zap-icon>آخـر الدورات
       </h2>
       <g-link to="/" class="inline-block text-xs p-1 rounded">شاهد الكل</g-link>

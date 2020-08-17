@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
     <headroom>
-      <header class="header w-full md:w-base">
-        <strong>
+      <header class="header block text-center sm:flex sm:justify-between sm:items-center w-full md:w-base">
+        <strong class="block my-6">
           <g-link to="/" class="logo text-xs md:text-base">{{ $static.metadata.siteName }}</g-link>
         </strong>
         <nav class="nav">
@@ -20,17 +20,17 @@
       </header>
     </headroom>
     <slot />
-    <footer class="text-sm mt-16 mb-6">
-      <div class="my-6 flex justify-between">
-        <div class="footer__links self-center">
+    <footer class="text-xs sm:text-sm mt-16 mb-6">
+      <div class="my-6 flex flex-wrap lg:flex-no-wrap justify-center lg:justify-between">
+        <div class="footer__links self-center order-2 lg:order-1 w-full lg:text-right">
           <g-link to="/" class="footer__link">سياسة الخصوصية</g-link>
           <g-link to="/" class="footer__link">خدماتنا</g-link>
           <g-link to="/" class="footer__link">عنا</g-link>
         </div>
-        <div class="footer__socialmedia">
-          <twitter-icon class="inline-block ml-2"></twitter-icon>
-          <facebook-icon class="inline-block ml-2"></facebook-icon>
-          <linkedin-icon class="inline-block ml-2"></linkedin-icon>
+        <div class="footer__socialmedia mb-4 lg:mb-0 w-full order-1 lg:order-2 lg:text-left">
+          <twitter-icon class="inline-block ml-2 w-4 sm:w-6"></twitter-icon>
+          <facebook-icon class="inline-block ml-2 w-4 sm:w-6"></facebook-icon>
+          <linkedin-icon class="inline-block ml-2 w-4 sm:w-6"></linkedin-icon>
         </div>
       </div>
       <p>
@@ -113,7 +113,7 @@ export default {
 }
 
 .headroom > header {
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
   transition: background-color .6s;
 }
 
@@ -145,9 +145,6 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 20px;
   height: 80px;
 }

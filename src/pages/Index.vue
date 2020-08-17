@@ -1,15 +1,15 @@
 <template>
   <Layout>
-    <h1 class="text-5xl font-bold">سينتاكس</h1>
+    <h1 class="text-4xl sm:text-5xl font-bold mt-4">سينتاكس</h1>
 
-    <div class="blog-principle">
+    <div class="blog-principle text-sm md:text-xl">
       <p class="mt-4">
         <q>
           إذا مُنع العلم عن العامة فلا خير فيه للخاصة -
           <span class="font-bold">أنس بن مالك</span>
         </q>
       </p>
-      <p class="mt-3 max-w-md">
+      <p class="mt-4 max-w-md lg:max-w-lg">
         <q>
           شَرُّ القومِ قَوْمٌ مَرُّوُا بِأَرْضٍ فَلاَةٍ، فلما تمكن منهم الظمأ
           واستيأسوا من طلب الورد، أدركوا بئرا فشربوا منها حتى قضوا وطرهم، ووردوا
@@ -19,9 +19,9 @@
         </q>
       </p>
     </div>
-    <latest-posts class="mt-16" />
-    <latest-tutorials class="mt-16" />
-    <latest-courses class="mt-16" />
+    <latest-posts class="mt-10" />
+    <latest-tutorials class="mt-10" />
+    <latest-courses class="mt-10" />
   </Layout>
 </template>
 
