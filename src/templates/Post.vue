@@ -2,7 +2,7 @@
   <Layout>
     <div class="mt-16">
       <div class="text-center">
-        <h1 class="post__title text-2xl sm:text-5xl mb-4">{{ $page.post.title }}</h1>
+        <h1 class="post__title text-2xl sm:text-3xl lg:text-5xl mb-4">{{ $page.post.title }}</h1>
         <div class="post__time text-smallest sm:text-xs">
           <span>{{ moment($page.post.date).format("MMMM Do, YYYY") }}</span> |
           <span class="font-bold">{{ $page.post.timeToRead }} min read</span>
@@ -20,7 +20,7 @@
           </span>
         </div>
       </div>
-      <div class="mt-10 sm:mt-16 break-words text-lg sm:text-xl">
+      <div class="mt-10 sm:mt-16 break-words text-lg md:text-xl">
         <p v-html="$page.post.content"></p>
       </div>
     </div>
