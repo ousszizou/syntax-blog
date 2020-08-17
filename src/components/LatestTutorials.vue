@@ -6,9 +6,7 @@
     </div>
     <div class="latestTutorials__content mt-6">
       <ul>
-        <li v-for="tutorial in tutorials" :key="tutorial.title" class="rounded hover:bg-gray-300 p-3">
-          <g-link to="">{{ tutorial.title }}</g-link>
-        </li>
+        <tutorial-list />
       </ul>
     </div>
   </div>
@@ -16,21 +14,12 @@
 
 <script>
 import { FeatherIcon } from "vue-feather-icons";
+import TutorialList from "./TutorialList.vue";
 export default {
   components: {
     FeatherIcon,
+    TutorialList
   },
-  data() {
-    return {
-      tutorials: [
-        {title: "كيفية إضافة عنصر في بداية مصفوفة في JavaScript"},
-        {title: "كيفية تبديل عنصري مصفوفة في JavaScript"},
-        {title: "كيفية استخدام Sequelize للتعامل مع PostgreSQL"},
-        {title: "مقدمة في Linux"},
-        {title: "كيفية عكس مصفوفة JavaScript"},
-      ],
-    }
-  }
 };
 </script>
 

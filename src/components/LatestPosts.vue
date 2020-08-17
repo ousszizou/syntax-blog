@@ -8,13 +8,7 @@
     </div>
     <div class="latestPosts__content mt-6">
       <ul>
-        <li
-          v-for="article in articles"
-          :key="article.title"
-          class="rounded hover:bg-gray-300 p-3"
-        >
-         <g-link to="">{{ article.title }}</g-link>
-        </li>
+        <post-list v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
       </ul>
     </div>
   </div>
@@ -22,20 +16,11 @@
 
 <script>
 import { CoffeeIcon } from "vue-feather-icons";
+import PostList from "./PostList.vue";
 export default {
   components: {
     CoffeeIcon,
-  },
-  data() {
-    return {
-      articles: [
-        { title: "7 أوامر Git قد لا تعرفها" },
-        { title: "كيف تتعلم البرمجة؟" },
-        { title: "5 أشياء أحببتها في معرض اعمالي المعمول بالـ Gridsome" },
-        { title: "ما هو الجديد في إصدار Tailwindcss 2" },
-        { title: "اجعل تصفح GitHub أسهل وأسرع مع Octotree" },
-      ],
-    };
+    PostList,
   },
 };
 </script>

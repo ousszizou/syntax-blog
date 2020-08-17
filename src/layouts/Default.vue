@@ -85,6 +85,7 @@ export default {
 .headroom {
   width: 100%;
   background: var(--bg-color);
+  transition: background-color .6s !important;
 }
 
 .headroom--top {
@@ -110,7 +111,7 @@ export default {
 .headroom > header {
   width: 720px;
   margin: 0 auto;
-  background: var(--bg-color);
+  transition: background-color .6s;
 }
 
 /* change highlight selection color */

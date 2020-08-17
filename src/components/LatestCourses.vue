@@ -1,14 +1,16 @@
 <template>
   <div>
     <div class="latestCourses__header">
-      <h2 class="text-xl font-bold inline-block ml-4"><zap-icon class="inline ml-1 w-4"></zap-icon>آخـر الدورات</h2>
+      <h2 class="text-xl font-bold inline-block ml-4">
+        <zap-icon class="inline ml-1 w-4"></zap-icon>آخـر الدورات
+      </h2>
       <g-link to="/" class="inline-block text-xs p-1 rounded">شاهد الكل</g-link>
     </div>
     <div class="latestCourses__content mt-6">
       <ul>
-        <li v-for="course in courses" :key="course.title" class="rounded hover:bg-gray-300 p-3">
-          <g-link to="">{{ course.title }}</g-link>
-        </li>
+        <course-list
+          
+        />
       </ul>
     </div>
   </div>
@@ -16,21 +18,12 @@
 
 <script>
 import { ZapIcon } from "vue-feather-icons";
+import CourseList from "./CourseList.vue";
 export default {
   components: {
     ZapIcon,
+    CourseList,
   },
-  data() {
-    return {
-      courses: [
-        {title: "دورة تعلم بايثون من الصفر إلى الإحتراف"},
-        {title: "دورة تعلم جافاسكربت الشاملة"},
-        {title: "دورة تعلم react من الصفر إلى الإحتراف"},
-        {title: "دورة تعلم Vuejs من الصفر إلى الإحتراف"},
-        {title: "دورة الويب الشاملة"},
-      ],
-    }
-  }
 };
 </script>
 
