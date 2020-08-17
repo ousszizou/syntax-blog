@@ -28,13 +28,19 @@
           <g-link to="/" class="footer__link">عنا</g-link>
         </div>
         <div class="footer__socialmedia mb-4 lg:mb-0 w-full order-1 lg:order-2 lg:text-left">
-          <twitter-icon class="inline-block ml-2 w-4 sm:w-6"></twitter-icon>
-          <facebook-icon class="inline-block ml-2 w-4 sm:w-6"></facebook-icon>
-          <linkedin-icon class="inline-block ml-2 w-4 sm:w-6"></linkedin-icon>
+          <g-link>
+            <twitter-icon class="inline-block ml-2 w-4 sm:w-6"></twitter-icon>
+          </g-link>
+          <g-link>
+            <facebook-icon class="inline-block ml-2 w-4 sm:w-6"></facebook-icon>
+          </g-link>
+          <g-link>
+            <linkedin-icon class="inline-block ml-2 w-4 sm:w-6"></linkedin-icon>
+          </g-link>
         </div>
       </div>
       <p>
-        Created by <span class="font-bold">Oussama Djaidri</span>. Powered by
+        Created by <g-link to="https://xenodochial-yonath-b7c6a8.netlify.app/" class="font-bold">Oussama Djaidri</g-link>. Powered by
         <g-link to="https://gridsome.org/" class="font-bold underline"
           >Gridsome</g-link
         >
@@ -195,8 +201,9 @@ footer {
   color: #6fb451;
 }
 
-.footer__socialmedia:hover {
+.footer__socialmedia a:hover {
   cursor: pointer;
+  color: #6fb451;
 }
 
 
