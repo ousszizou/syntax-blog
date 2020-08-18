@@ -193,7 +193,6 @@ footer {
   margin-left: 20px;
 }
 
-
 .footer__links a:hover {
   color: #6fb451;
 }

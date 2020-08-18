@@ -1,9 +1,9 @@
 <template>
   <div class="notfound flex justify-center items-center h-screen">
-    <div class="w-1/2 text-center">
-      <frown-icon size="4x" class="mx-auto icon"></frown-icon>
-      <h1 class="text-5xl mb-8">الصفحة التي تبحث عنها غير موجودة أو تم حذفها</h1>
-      <g-link to="/" class="rounded-full px-6 py-2 text-xl">عودة للرئيسية</g-link>
+    <div class="w-full lg:w-1/2 text-center">
+      <frown-icon  class="mx-auto icon"></frown-icon>
+      <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10">الصفحة التي تبحث عنها غير موجودة</h1>
+      <g-link to="/" class="rounded-full px-6 py-2 text-sm md:text-xl">عودة للرئيسية</g-link>
     </div>
   </div>
 </template>
@@ -21,7 +21,10 @@ export default {
 
 .icon {
   color:#ffc107;
+  width: 100px;
+  height: 100px;
 }
+
 a {
   background: #ffc107;
   color: var(--bg-color);
