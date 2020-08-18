@@ -25,7 +25,7 @@
         <div class="footer__links self-center order-2 lg:order-1 w-full lg:text-right">
           <g-link to="/" class="footer__link">سياسة الخصوصية</g-link>
           <g-link to="/" class="footer__link">خدماتنا</g-link>
-          <g-link to="/" class="footer__link">عنا</g-link>
+          <g-link to="/about" class="footer__link">عنا</g-link>
         </div>
         <div class="footer__socialmedia mb-4 lg:mb-0 w-full order-1 lg:order-2 lg:text-left">
           <g-link>
