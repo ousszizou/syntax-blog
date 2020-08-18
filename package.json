@@ -1,5 +1,5 @@
 {
-  "name": "syntaxBlog",
+  "name": "syntax-blog",
   "private": true,
   "scripts": {
     "build": "gridsome build",
