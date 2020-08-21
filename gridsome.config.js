@@ -14,7 +14,17 @@ module.exports = {
       options: {
         path: "content/posts/**/*.md",
         typeName: "Post",
-        path: "./content/posts/**/*.md",
+        remark: {
+          plugins: [
+            "gridsome-plugin-remark-prismjs-all",
+            [
+              "remark-attr",
+              {
+                enableAtxHeaderInline: true,
+              },
+            ],
+          ],
+        },
       },
     },
     {
@@ -35,14 +45,9 @@ module.exports = {
     },
   ],
   templates: {
-    Post: "/posts/:slug",
-    Tutorial: "/tutorials/:slug",
-    Course: "/courses/:slug",
-  },
-  transformers: {
-    remark: {
-      plugins: ["@gridsome/remark-prismjs"],
-    },
+    Post: "/posts/:urlParam",
+    Tutorial: "/tutorials/:urlParam",
+    Course: "/courses/:urlParam",
   },
   css: {
     loaderOptions: {
@@ -50,5 +55,8 @@ module.exports = {
         plugins: [tailwindcss],
       },
     },
+  },
+  permalinks: {
+    trailingSlash: false,
   },
 };

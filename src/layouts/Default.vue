@@ -139,7 +139,6 @@ body {
     "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
 .layout {
@@ -204,6 +203,107 @@ footer {
 footer p a:hover {
   cursor: pointer;
   color: #6fb451;
+}
+
+/* Single Post Styling */
+
+.post__content hr {
+  margin: 25px 0;
+}
+
+.post__content ul li {
+  margin-bottom: 20px;
+}
+
+.post__content ul li span {
+  margin-right: 15px;
+}
+
+.post__content ul li::before {
+  content: " ";
+  width: 7px;
+  height: 7px;
+  background: var(--title-color);
+  display: inline-block;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+
+.post__content p .note {
+  background: var(--note-color);
+  border-radius: 7px;
+  padding: 0 25px;
+  color: #8e8239;
+}
+
+.post__content p .explanation {
+  color: #ff5722;
+}
+
+.post__content p img {
+  margin: 40px 0;
+  box-shadow: 3px 3px 18px #00000030;
+}
+
+.post__content p span strong {
+  color: #896722;
+}
+
+.post__content h1 {
+  color: var(--title-color);
+}
+
+.post__content h1:hover a::before {
+  content: "#";
+  margin-left: 10px;
+}
+
+#ext-link {
+  color: #ff9800;
+}
+
+#ext-link:hover {
+  color: #af6800;
+}
+
+/* oveeride font family (prismJs) */
+
+/* change highlight selection color (prismJs) */
+code[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection,
+pre[class*="language-"] ::-moz-selection {
+	background: #ffee5b !important;
+}
+
+code[class*="language-"]::selection,
+pre[class*="language-"]::selection,
+code[class*="language-"] ::selection,
+pre[class*="language-"] ::selection {
+	background: #ffee5b !important;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  line-height: 1.8 !important;
+  border-radius: 7px;
+  text-align: left;
+  direction: ltr !important;
+  font-size: 20px !important;
+}
+
+.gridsome-code-title {
+  position: relative;
+  z-index: 100;
+  margin-bottom: -0.8em;
+  background-color: #feb;
+  color: #607D8B;
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+  font-family: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  line-height: 1.5;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
 }
 
 

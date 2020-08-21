@@ -11,7 +11,7 @@ import DefaultLayout from "~/layouts/Default.vue";
 
 import moment from "moment";
 
-import "prismjs/themes/prism.css";
+import "prism-themes/themes/prism-material-oceanic.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
