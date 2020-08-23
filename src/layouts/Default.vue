@@ -6,7 +6,7 @@
           <g-link to="/" class="logo text-xs md:text-base">{{ $static.metadata.siteName }}</g-link>
         </strong>
         <nav class="nav">
-          <g-link class="nav__link px-1 text-base md:px-2" to="/articles/">مقالات </g-link>
+          <g-link class="nav__link px-1 text-base md:px-2" to="/posts/">مقالات </g-link>
           <g-link class="nav__link px-1 text-base md:px-2" to="/tutorials/">دروس </g-link>
           <g-link class="nav__link px-1 text-base md:px-2" to="/courses/">دورات </g-link>
           <g-link class="nav__link px-1 text-base md:px-2" to="/contact">اتصل بنا</g-link>

@@ -27,7 +27,7 @@
 
 <page-query>
 query {
-  allPost {
+  latestPost: allPost(sortBy: "date", order: DESC, limit: 5) {
     totalCount
     edges{
       node{
@@ -37,10 +37,10 @@ query {
       }
     }
   }
-  allTutorial {
+  allTutorial{
     totalCount
   }
-  allCourse {
+  allCourse{
     totalCount
   }
 }
