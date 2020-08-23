@@ -118,8 +118,14 @@ export default {
 }
 
 .headroom > header {
-  margin: 0 auto 10px auto;
+  margin: 0 auto 25px auto;
   transition: background-color .6s;
+}
+
+@screen sm {
+  .headroom > header {
+    margin: 0 auto 10px auto;
+  }
 }
 
 /* change highlight selection color */
