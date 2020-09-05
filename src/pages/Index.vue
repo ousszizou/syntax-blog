@@ -21,7 +21,6 @@
     </div>
     <latest-posts class="mt-10" />
     <latest-tutorials class="mt-10" />
-    <latest-courses class="mt-10" />
   </Layout>
 </template>
 
@@ -40,16 +39,12 @@ query {
   allTutorial{
     totalCount
   }
-  allCourse{
-    totalCount
-  }
 }
 </page-query>
 
 <script>
 import LatestPosts from "~/components/LatestPosts.vue";
 import LatestTutorials from "~/components/LatestTutorials.vue";
-import LatestCourses from "~/components/LatestCourses.vue";
 export default {
   metaInfo: {
     title: "الرئيسية",
@@ -57,7 +52,6 @@ export default {
   components: {
     LatestPosts,
     LatestTutorials,
-    LatestCourses,
   },
 };
 </script>
@@ -70,4 +64,5 @@ export default {
 .blog-principle span {
   color: #6fb451;
 }
+
 </style>

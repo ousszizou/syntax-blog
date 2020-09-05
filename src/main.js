@@ -13,9 +13,13 @@ import moment from "moment";
 
 import "prism-themes/themes/prism-material-oceanic.css";
 
+import InfiniteLoading from "vue-infinite-loading";
+
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
+
+  Vue.use(InfiniteLoading)
 
   Vue.prototype.moment = moment;
 

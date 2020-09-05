@@ -2,11 +2,11 @@
   <div>
     <div class="latestTutorials__header">
       <h2 class="text-lg md:text-xl font-bold inline-block ml-4"><feather-icon class="inline ml-1 w-4"></feather-icon>آخر الدروس</h2>
-      <g-link to="/" class="inline-block text-xs p-1 rounded">شاهد الكل</g-link>
+      <g-link to="/tutorials" class="inline-block text-xs p-1 rounded">شاهد الكل</g-link>
     </div>
     <div class="latestTutorials__content mt-6">
       <ul>
-        <tutorial-list />
+        <tutorial-list tutorial="" />
       </ul>
     </div>
   </div>

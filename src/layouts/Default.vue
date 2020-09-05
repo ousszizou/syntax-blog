@@ -8,7 +8,6 @@
         <nav class="nav">
           <g-link class="nav__link px-1 text-base md:px-2" to="/posts/">مقالات </g-link>
           <g-link class="nav__link px-1 text-base md:px-2" to="/tutorials/">دروس </g-link>
-          <g-link class="nav__link px-1 text-base md:px-2" to="/courses/">دورات </g-link>
           <g-link class="nav__link px-1 text-base md:px-2" to="/contact">اتصل بنا</g-link>
           <ToggleDarkMode class="align-middle mr-2 md:mr-6" data-cursor-hover>
             <template slot="default" slot-scope="{ dark }">
@@ -86,6 +85,31 @@ export default {
 /* .layout div:first-child {
   width: 100%;
 } */
+
+/*  bad code post styling */
+.bad {
+  background: var(--bad-code);
+  padding: 50px;
+}
+
+.bad::before {
+  content: "سيىء";
+  color: #733232;
+  font-weight: bold;
+}
+
+/*  good code post styling */
+.good {
+  background: var(--good-code);
+  padding: 50px;
+}
+
+.good::before {
+  content: "جيد";
+  color: #556f38;
+  font-weight: bold;
+}
+
 
 .headroom {
   width: 100%;

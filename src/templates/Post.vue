@@ -24,7 +24,7 @@
           <g-link class="mx-2 btn btn-code rounded-full px-8" :to="$page.post.codeUrl" v-if="$page.post.codeUrl">الكود</g-link>
         </div>
       </div>
-      <div class="table-of-contents mt-16">
+      <div class="table-of-contents mt-16" v-if="$page.post.tableOfContent.length">
         <h3 class="font-bold text-lg mb-4"># جدول المحتويات :</h3>
         <ul>
           <li class="my-1 item-of-content text-sm" v-for="(item, index) in $page.post.tableOfContent" :key="item"><a :href="'#toc'+index">{{ item }}</a></li>
@@ -94,6 +94,7 @@ export default {
 </script>
 
 <style scoped>
+
 h1 {
   color: var(--title-color);
 }

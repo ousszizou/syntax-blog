@@ -17,6 +17,8 @@ body {
   --link-hover-bg: #e5e5e5; // show all link bg color hover
   --each-color: #f2f2f2; // items (<li>) color
   --note-color: #fff9b5; // note alert
+  --bad-code: #F7E8E8; // bad code div
+  --good-code: #cadcb6;
 }
 
 // Make things smaller for mobile
@@ -39,4 +41,5 @@ body[lights-out] {
   --link-hover-bg: #00000052;
   --each-color: #303030;
   --note-color: #e4dfa3;
+  --bad-code: #e4a6a6;
 }
